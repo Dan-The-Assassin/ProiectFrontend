@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container">
+    <h2> Register </h2>
+    <form>
+        <div [formGroup]="registerForm" class="container">
+        <label for="username">Email:</label><input type="text" formControlName="username">
+        <label for="password">Password:</label><input type="password" formControlName="password">
+        <label for="confirm-password">Confirm Password:</label><input type="password" formControlName="confirmPassword">
+        <button (click)="registerUser()" [disabled]="!this.registerForm.valid" type="button">
+            Register
+        </button>
+        </div>
+    </form>
+    <div *ngIf="attempt==false" class="error">
+        <h3>
+            Passwords do not match!
+        </h3>
+        </div>
+    <div *ngIf="userExists==true" class="error">
+            <h3>
+                Email already used!
+            </h3>
+            </div>
+    </div>

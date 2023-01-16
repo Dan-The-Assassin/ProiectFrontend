@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="container">
+<h2> Login </h2>
+<form>
+    <div [formGroup]="accountForm" class="container">
+    <label for="username">Email:</label><input formControlName="username">
+    <label for="password">Password:</label><input type="password" formControlName="password">
+    <button (click)="tryLogin()" type="button">
+        Login
+    </button>
+</div>
+</form>
+<div *ngIf="attempt==false" class="error">
+    <h3>
+        Wrong username/password!
+    </h3>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.post-user{
+    font-weight: bold;
+}
+
+.post-stats{
+    font-weight:bold;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding-top:10px;
+}
+
+.post-row{
+    width:  400px;
+    display:flex;
+    flex-direction: column;
+    margin:10px 0;
+    padding:10px;
+    transition:0.3s;
+    cursor:pointer;
+    border:1px solid rgb(202, 202, 202);
+}
+
+.post-row:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.posts{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction: column;
+}
+
+.green{
+    color:green;
+}
+
+input{
+    width:250px;
+    height:35px;
+    padding:5px;
+}
+
+button{
+    width:100px;
+}
+
+form{
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+}

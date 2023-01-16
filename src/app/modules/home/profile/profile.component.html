@@ -1,0 +1,21 @@
+<app-main-header></app-main-header>
+<div class="container">
+<div class="profile-top">
+  <div class="title">
+    <h2> Welcome, {{this.username}}</h2>
+  </div>
+  <div class="profile-stats">
+    Posts : <div class="profile-number"> {{getNrPosts()}} </div>
+    Likes : <div class="profile-number"> {{getNrLikes()}}  </div>
+    Replies : <div class="profile-number"> {{getNrReplies()}} </div>
+    <button class="profile-password" routerLink="/changepass"> Change password </button>
+  </div>
+</div>
+<div class='posts'>
+    <div *ngFor="let post of posts">
+      <div *ngIf="this.username == post.user" class = 'post-row'>
+        <app-post [post]="post"></app-post>
+      </div>
+    </div>
+</div>
+</div>

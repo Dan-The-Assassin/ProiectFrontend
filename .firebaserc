@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proiect-la-angular"
+  },
+  "targets": {
+    "proiect-la-angular": {
+      "hosting": {
+        "ProiectAngular": [
+          "proiect-la-angular"
+        ]
+      }
+    }
+  }
+}

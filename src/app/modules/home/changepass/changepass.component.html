@@ -1,0 +1,11 @@
+<app-main-header></app-main-header>
+<div class="container">
+    <form [formGroup]="changepassForm">
+        <label for="old-password">Old password:</label><input type="password" formControlName="oldPassword">
+        <label for="password">Password:</label><input type="password" formControlName="password">
+        <label for="confirm-password">Confirm password:</label><input type="password" formControlName="confirmPassword">
+        <button (click)="changePassword()" [disabled]="!this.changepassForm.valid" type="button">
+            Change password
+        </button>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<div class='post-user'>{{post.user}}</div>
+        {{post.content}}
+        <div class='post-stats'>Replies({{post.replies.length}}) 
+            <a (click)="addLike(post)" class='post-like' [class.green] = "alreadyliked === true">Like({{post.likes.length}})</a> 
+        </div>
+        <div *ngFor="let reply of post.replies" class = 'replies'>
+           {{reply}}
+        </div>
+        <form [formGroup]="replyForm">
+        <input type="text" formControlName="text" placeholder="Write a reply">
+        <button (click)="saveReply()">Reply</button>
+        </form>
